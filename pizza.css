@@ -47,13 +47,13 @@ body{
 }
 
 .rotateR{
-transition: ease-in 2s;
-  transform: rotate(-180deg);
+transition: ease-in 1s;
+  transform: rotate(-90deg);
 }
 
 .rotateL{
-transition: ease-in 2s;
-  transform: rotate(180deg);
+transition: ease-in 1s;
+  transform: rotate(90deg);
 }
 
 .page{

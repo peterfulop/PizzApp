@@ -44,6 +44,7 @@ export default class View {
         const servings = this.DOM.servingsInput.value;
         const doughBall = this.DOM.doughBall.value;
 
+
         return {
             servings: parseInt(servings),
             flour: Math.round(doughRatio.flour * doughBall * servings),

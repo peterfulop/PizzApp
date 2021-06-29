@@ -27,6 +27,8 @@ const controlBackHome = () => {
 export default function init() {
     pw.handleServingsMinus(controlReduceServings);
     pw.handlerServingsPlus(controlEnhanceServings);
+    pw.handlerServingsUpdate();
+    pw.handlerDoughBallUpdate();
     pw.handlerResetInputs(controlReset);
     pw.handlerCalculate(controlCalculate);
     pw.handlerBackToHome(controlBackHome);
