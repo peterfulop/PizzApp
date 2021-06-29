@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/pizza.css">
+    <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+
+    <title>Pizza dough calculator</title>
+</head>
+
+<body>
+
+
+    <main>
+
+        <div class="d-block main-container">
+
+            <div class="logo">
+                <img class="logo__img" id="pizza-logo" src="./IMG/pizza_logo.svg" alt="">
+            </div>
+
+            <div id="input-page" class="page input-quantity">
+                <div class="input-element">
+                    <label for="flour">Servings:</label>
+
+                    <input type="number" name="serving" id="serving" min="1" value="1">
+
+                    <div class="input-element__actions">
+                        <button class="btn btn-quantity" id="minus-quantity" type="button"><i
+                                class="fas fa-minus"></i></button>
+                        <button class="btn btn-quantity" id="plus-quantity" type="button"><i
+                                class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="input-element">
+                    <label for="ball">Ball size:</label>
+                    <input type="number" name="ball" id="ball" min="1" value="300">
+                </div>
+
+                <div class="input-element">
+                    <button class="btn btn-reset" id="reset-btn" type="button">Reset</button>
+                    <button class="btn btn-calculate" id="calculate-btn" type="button">Calculate</button>
+                </div>
+            </div>
+
+            <div id="output-page" class="page output-quantity d-none">
+
+
+                <div class="servings-logo">
+
+                    <div class="d-block servings-logo__img">
+                        <img src="./IMG/pizza_box.svg" alt="">
+                    </div>
+
+                    <div class="d-block servings-logo__span">
+                        <span id="list-span-servings" class="servings-count"></span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="list-element">
+                    <div class="list-element__img">
+                        <img src="./IMG/flour.svg" alt="">
+                    </div>
+                    <div class="list-element__title">
+                        <p>Flour:</p>
+                    </div>
+                    <div class="list-element__quantity">
+                        <p><span id="list-span-flour">1</span> g</p>
+                    </div>
+                </div>
+
+                <div class="list-element">
+                    <div class="list-element__img">
+                        <img src="./IMG/water.svg" alt="">
+                    </div>
+                    <div class="list-element__title">
+                        <p>Water:</p>
+                    </div>
+                    <div class="list-element__quantity">
+                        <p><span id="list-span-water">1</span> g</p>
+                    </div>
+                </div>
+
+                <div class="list-element">
+                    <div class="list-element__img">
+                        <img src="./IMG/salt.svg" alt="">
+                    </div>
+                    <div class="list-element__title">
+                        <p>Salt:</p>
+                    </div>
+                    <div class="list-element__quantity">
+                        <p><span id="list-span-salt">1</span> g</p>
+                    </div>
+                </div>
+
+                <div class="list-element">
+                    <div class="list-element__img">
+                        <img src="./IMG/yeast.svg" alt="">
+                    </div>
+                    <div class="list-element__title">
+                        <p>Yeast:</p>
+                    </div>
+                    <div class="list-element__quantity">
+                        <p><span id="list-span-yeast"></span> g</p>
+                    </div>
+                </div>
+
+                <div class="list-element">
+
+                    <div class="list-element__title">
+                        <p>Total:</p>
+                    </div>
+                    <div class="list-element__quantity">
+                        <b>
+                            <p><span id="list-span-total"></span> g</p>
+                        </b>
+                    </div>
+                </div>
+
+                <button class="btn btn-back" id="back-btn" type="button">Back</button>
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </main>
+
+    <footer class="footer">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></footer>
+</body>
+
+<script type="module" src="./JS/app.js"></script>
+
+</html>
