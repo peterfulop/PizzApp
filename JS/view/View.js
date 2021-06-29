@@ -28,14 +28,14 @@ export default class View {
         if (hide) {
             this.DOM.inputPage.classList.add('d-none');
             this.DOM.outputPage.classList.remove('d-none');
-            this.DOM.pizzaLogo.classList.remove("rotateL");
-            this.DOM.pizzaLogo.classList.add("rotateR");
+            this.DOM.pizzaLogo.classList.remove("rotateR");
+            this.DOM.pizzaLogo.classList.add("rotateL");
 
         } else {
             this.DOM.inputPage.classList.remove('d-none');
             this.DOM.outputPage.classList.add('d-none');
-            this.DOM.pizzaLogo.classList.remove("rotateR");
-            this.DOM.pizzaLogo.classList.add("rotateL");
+            this.DOM.pizzaLogo.classList.remove("rotateL");
+            this.DOM.pizzaLogo.classList.add("rotateR");
         }
 
     };
