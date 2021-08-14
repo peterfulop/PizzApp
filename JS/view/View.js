@@ -19,6 +19,8 @@ export default class View {
         listItemSalt: document.getElementById('list-span-salt'),
         listItemYeast: document.getElementById('list-span-yeast'),
         listItemTotal: document.getElementById('list-span-total'),
+        listItemHidratation: document.getElementById('list-span-hidratation'),
+        listItemBallSize: document.getElementById('list-span-ballsize'),
         backBtn: document.getElementById('back-btn')
     }
 
@@ -46,6 +48,7 @@ export default class View {
 
 
         return {
+            doughBall: doughBall,
             servings: parseInt(servings),
             flour: Math.round(doughRatio.flour * doughBall * servings),
             salt: Math.round(doughRatio.salt * doughBall * servings),
@@ -53,6 +56,9 @@ export default class View {
             yeast: doughRatio.yeast,
             total: function () {
                 return this.flour + this.salt + this.water
+            },
+            hidratation: function () {
+                return (this.water / this.flour * 100).toPrecision(2);
             }
         }
     };
@@ -66,6 +72,8 @@ export default class View {
         this.DOM.listItemSalt.innerHTML = amounts.salt;
         this.DOM.listItemYeast.innerHTML = amounts.yeast;
         this.DOM.listItemTotal.innerHTML = amounts.total();
+        this.DOM.listItemHidratation.innerHTML = amounts.hidratation();
+        this.DOM.listItemBallSize.innerHTML = amounts.doughBall;
     };
 
     resetInputs() {
