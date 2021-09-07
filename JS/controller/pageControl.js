@@ -36,7 +36,7 @@ const controlBackHome = () => {
 
 export default function init() {
 
-    pw.handlerShowMenubar();
+    pw.handlerShowHideMenubar();
     pw.handlerHideMenubar();
 
     pw.handleServingsMinus(controlReduceServings);

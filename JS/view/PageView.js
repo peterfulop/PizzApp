@@ -60,18 +60,31 @@ export default class PageView extends View {
         });
     };
 
-    handlerShowMenubar() {
+    handlerShowHideMenubar() {
         this.DOM.pizzaLogo.addEventListener('click', () => {
-            this.DOM.menubar.classList.remove("hide");
-            this.DOM.menubar.classList.add("show");
+
+            if (this.DOM.menubar.classList.contains("show")) {
+                this.hideMenubar();
+            } else {
+                this.showMenubar();
+            }
+
         })
     }
 
     handlerHideMenubar() {
         this.DOM.menubar.addEventListener('mouseleave', () => {
-            this.DOM.menubar.classList.remove("show");
-            this.DOM.menubar.classList.add("hide");
+            this.hideMenubar();
         })
+    }
+
+    hideMenubar() {
+        this.DOM.menubar.classList.remove("show");
+        this.DOM.menubar.classList.add("hide");
+    };
+    showMenubar() {
+        this.DOM.menubar.classList.add("show");
+        this.DOM.menubar.classList.remove("hide");
     }
 
 };
