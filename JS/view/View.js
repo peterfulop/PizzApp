@@ -4,6 +4,7 @@ export default class View {
 
     DOM = {
 
+        menubar: document.getElementById('menubar'),
         inputPage: document.getElementById('input-page'),
         outputPage: document.getElementById('output-page'),
         pizzaLogo: document.getElementById('pizza-logo'),
@@ -11,6 +12,8 @@ export default class View {
         doughBall: document.getElementById('ball'),
         servingsMinus: document.getElementById('minus-quantity'),
         servingsPlus: document.getElementById('plus-quantity'),
+        ballsizeMinus: document.getElementById('minus-dough'),
+        ballsizePlus: document.getElementById('plus-dough'),
         resetBtn: document.getElementById('reset-btn'),
         calculateBtn: document.getElementById('calculate-btn'),
         listItemServings: document.getElementById('list-span-servings'),
@@ -78,7 +81,7 @@ export default class View {
 
     resetInputs() {
         this.DOM.servingsInput.value = 1;
-        this.DOM.doughBall.value = 300;
+        this.DOM.doughBall.value = 270;
     };
 
 

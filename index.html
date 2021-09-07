@@ -21,22 +21,49 @@
                 <img class="logo__img" id="pizza-logo" src="./IMG/pizza_logo.svg" alt="">
             </div>
 
-            <div id="input-page" class="page input-quantity">
-                <div class="input-element">
-                    <label for="flour">Servings:</label>
+            <div class="menubar" id="menubar">
+                <div class="menuitem active">
+                    <p>Calculator</p>
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div class="menuitem">
+                    <p>Recipes</p>
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="menuitem">
+                    <p>Favorites</p>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
 
-                    <input type="number" name="serving" id="serving" min="1" value="1">
+            <div id="input-page" class="page input-quantity">
+
+                <div class="input-element">
+
+                    <label for="serving">Servings:</label>
 
                     <div class="input-element__actions">
-                        <button class="btn btn-quantity" id="minus-quantity" type="button"><i
+                        <button class="btn btn-quantity left" id="minus-quantity" type="button"><i
                                 class="fas fa-minus"></i></button>
-                        <button class="btn btn-quantity" id="plus-quantity" type="button"><i
+                        <input type="number" name="serving" id="serving" min="1" value="1">
+                        <button class="btn btn-quantity right" id="plus-quantity" type="button"><i
                                 class="fas fa-plus"></i></button>
                     </div>
+
                 </div>
+
                 <div class="input-element">
+
                     <label for="ball">Pizza dough size (g):</label>
-                    <input type="number" name="ball" id="ball" min="1" value="270">
+
+                    <div class="input-element__actions">
+                        <button class="btn btn-quantity left" id="minus-dough" type="button"><i
+                                class="fas fa-minus"></i></button>
+                        <input type="number" name="ball" id="ball" min="1" value="270">
+                        <button class="btn btn-quantity right" id="plus-dough" type="button"><i
+                                class="fas fa-plus"></i></button>
+                    </div>
+
                 </div>
 
                 <div class="input-element">

@@ -30,6 +30,18 @@ export default class PageView extends View {
         });
     };
 
+    handlerBallsizePlus(handler) {
+        this.DOM.ballsizePlus.addEventListener('click', () => {
+            handler();
+        });
+    };
+
+    handlerBallsizeMinus(handler) {
+        this.DOM.ballsizeMinus.addEventListener('click', () => {
+            handler();
+        });
+    };
+
     handlerCalculate(handler) {
         this.DOM.calculateBtn.addEventListener('click', () => {
             handler();
@@ -47,5 +59,19 @@ export default class PageView extends View {
             handler();
         });
     };
+
+    handlerShowMenubar() {
+        this.DOM.pizzaLogo.addEventListener('click', () => {
+            this.DOM.menubar.classList.remove("hide");
+            this.DOM.menubar.classList.add("show");
+        })
+    }
+
+    handlerHideMenubar() {
+        this.DOM.menubar.addEventListener('mouseleave', () => {
+            this.DOM.menubar.classList.remove("show");
+            this.DOM.menubar.classList.add("hide");
+        })
+    }
 
 };

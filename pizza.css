@@ -15,7 +15,6 @@ body{
 
 
 
-
 .main-container{
     margin: 5rem auto;
     background-color: #fae4ba;
@@ -30,21 +29,21 @@ body{
 .logo{
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .logo__img{
     width: 6.5rem;
     border-radius: 50%;
-    margin: 1rem;
     margin-top: -3rem;
     transition: ease-in 2s;
 
 }
 
-.logo__img:hover{
+/* .logo__img:hover{
     transition: ease-in 2s;
   transform: rotate(360deg);
-}
+} */
 
 .rotateR{
 transition: ease-in 1s;
@@ -54,6 +53,53 @@ transition: ease-in 1s;
 .rotateL{
 transition: ease-in 1s;
   transform: rotate(90deg);
+}
+
+
+.menubar{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.menubar.show{
+display: flex;
+}
+
+.menubar.hide{
+display: none;
+
+}
+
+.menuitem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 3rem;
+    background-color: lightgray;
+    margin: .25rem;
+    margin-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+.menuitem:hover  p,
+.menuitem:hover  i,
+.menuitem.active p,
+.menuitem.active i{
+    color: white;
+}
+
+.menuitem:hover,.menuitem.active
+ {
+    background-color: #faad39;
 }
 
 .page{
@@ -85,7 +131,7 @@ transition: ease-in 1s;
     border: none;
     width: 90%;
     text-align: center;
-        outline: none;
+    outline: none;
 
 }
 
@@ -99,6 +145,7 @@ transition: ease-in 1s;
     flex-direction: row;
     justify-content: space-between;
     margin: 1rem .5rem;
+    align-items: center;
 }
 
 .input-element__actions i{
@@ -144,11 +191,26 @@ transition: ease-in 1s;
    background-color: black;
    margin: 0;
    width: 45%;
-   height: 2rem;
-    border-radius: .5rem;
-
+   height: 2.5rem;
+border-radius: 1rem;
 
 }
+
+.btn-quantity.left{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-quantity.right{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#serving,#ball{
+        border-radius: 0;
+        height:2.5rem;
+}
+
 .btn-quantity:hover{
        background-color: orange;
        color: black;
@@ -159,7 +221,7 @@ transition: ease-in 1s;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-top: -50px;
+    margin-top: 0px;
     margin-right:50px;
     margin-bottom: 1rem;
     transition: ease-in .5s;
