@@ -1,12 +1,6 @@
 export const doughRatio = {
-    flour: 0.59,
-    salt: 0.016666667,
-    water: 0.34,
-    yeast: 7
+    flour: 0.618131614,
+    salt: 0.018506935,
+    water: 0.35903453,
+    yeast: 0.004326921
 };
-// export const doughRatio = {
-//     flour: 0.616666667,
-//     salt: 0.016666667,
-//     water: 0.366666667,
-//     yeast: 7
-// };

@@ -56,9 +56,9 @@ export default class View {
             flour: Math.round(doughRatio.flour * doughBall * servings),
             salt: Math.round(doughRatio.salt * doughBall * servings),
             water: Math.round(doughRatio.water * doughBall * servings),
-            yeast: doughRatio.yeast,
+            yeast: Math.round(doughRatio.yeast * doughBall * servings),
             total: function () {
-                return this.flour + this.salt + this.water
+                return this.flour + this.salt + this.water + this.yeast
             },
             hidratation: function () {
                 return (this.water / this.flour * 100).toPrecision(2);
